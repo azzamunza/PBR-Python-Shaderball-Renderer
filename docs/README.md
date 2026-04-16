@@ -3,6 +3,10 @@
 A **GPU-accelerated, standalone Python path tracer** that renders physically-based
 materials defined using the **OpenPBR v1.2** specification.
 
+> **Inspired by** [OpenPBR-viewer](https://github.com/portsmouth/OpenPBR-viewer) by
+> [portsmouth](https://github.com/portsmouth) – a WebGL-based interactive viewer for the
+> OpenPBR surface shading model that served as the conceptual foundation for this project.
+
 ---
 
 ## Features
@@ -114,6 +118,30 @@ docs/              # Documentation
 *(Rendered with 2048 samples, ACES tone mapping)*
 
 ![shaderball preview](https://placeholder.com/shaderball.png)
+
+---
+
+## Acknowledgements
+
+This project was inspired by and is based on the excellent work of
+**[portsmouth](https://github.com/portsmouth)** on the
+**[OpenPBR-viewer](https://github.com/portsmouth/OpenPBR-viewer)** – a WebGL-based
+interactive path tracer that implements the full
+[OpenPBR v1.2](https://academysoftwarefoundation.github.io/OpenPBR/) surface shading model.
+
+Key contributions from the original project that informed this Python implementation:
+
+| Area | Reference in OpenPBR-viewer |
+|---|---|
+| OpenPBR v1.2 material layer stack | `src/materials/`, shader GLSL sources |
+| Cook-Torrance BRDF with GGX NDF | `src/shaders/brdf.glsl` |
+| Importance-sampled IBL (equirectangular HDR) | `src/shaders/env_map.glsl` |
+| Progressive path tracing with MIS | `src/pathtracer/` |
+| Shaderball (Standard Shader Ball asset) | `assets/shaderball/` |
+
+A sincere **thank you** to portsmouth and all contributors to OpenPBR-viewer for making
+such a clean and well-documented reference implementation available under an open-source
+license.
 
 ---
 
