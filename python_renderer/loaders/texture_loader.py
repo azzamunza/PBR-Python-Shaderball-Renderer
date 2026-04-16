@@ -142,10 +142,7 @@ class TextureLoader:
         if image.shape[0] == height and image.shape[1] == width:
             return image
         if _PIL_AVAILABLE:
-            channels = image.shape[2] if image.ndim == 3 else 1
             pil = PILImage.fromarray(
-                (np.clip(image, 0, 1) * 255).astype(np.uint8)
-                if channels == 4 else
                 (np.clip(image, 0, 1) * 255).astype(np.uint8)
             )
             pil = pil.resize((width, height), PILImage.BILINEAR)

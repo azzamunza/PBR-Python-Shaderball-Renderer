@@ -204,7 +204,7 @@ def ggx_ndf(cos_theta_h: float, alpha: float) -> float:
     """GGX Normal Distribution Function value."""
     a2    = alpha * alpha
     denom = cos_theta_h * cos_theta_h * (a2 - 1.0) + 1.0
-    return a2 / (math.pi * denom * denom + 1e-12)
+    return a2 / (math.pi * (denom * denom) + 1e-12)
 
 
 def _smith_lambda(cos_theta: float, alpha: float) -> float:

@@ -111,6 +111,9 @@ class GPUPathtracer:
             log.warning("OpenGL not available – using CPU fallback.")
             self._cpu_fallback = CPUPathtracer(config)
 
+        from python_renderer.gpu.cuda.kernels import CUDADenoiser
+        self._denoiser = CUDADenoiser()
+
     # ---- GL setup -----------------------------------------------------------
     def setup_gl(self) -> None:
         """Initialise OpenGL context and compile compute shaders."""
@@ -278,9 +281,7 @@ class GPUPathtracer:
 
     def denoise(self, image: np.ndarray) -> np.ndarray:
         """Apply denoising (bilateral filter via CUDA or SciPy)."""
-        from python_renderer.gpu.cuda.kernels import CUDADenoiser
-        denoiser = CUDADenoiser()
-        return denoiser.denoise(image)
+        return self._denoiser.denoise(image)
 
     def save(self, path: str, image: np.ndarray) -> None:
         """Save the rendered image to disk."""
