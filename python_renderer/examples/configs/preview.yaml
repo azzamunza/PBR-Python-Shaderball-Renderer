@@ -1,0 +1,13 @@
+width: 512
+height: 512
+samples: 64
+max_bounces: 4
+use_gpu: true
+denoising: false
+output_path: preview.png
+output_format: png
+firefly_clamp: 10.0
+displacement_scale: 1.0
+tessellation_level: 2
+camera_fov: 45.0
+camera_distance: 3.0

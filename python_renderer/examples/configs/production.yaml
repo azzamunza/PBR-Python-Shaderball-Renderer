@@ -1,0 +1,13 @@
+width: 1920
+height: 1080
+samples: 2048
+max_bounces: 12
+use_gpu: true
+denoising: true
+output_path: production.png
+output_format: png
+firefly_clamp: 10.0
+displacement_scale: 1.0
+tessellation_level: 4
+camera_fov: 45.0
+camera_distance: 3.0

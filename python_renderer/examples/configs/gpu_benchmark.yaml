@@ -1,0 +1,13 @@
+width: 3840
+height: 2160
+samples: 4096
+max_bounces: 16
+use_gpu: true
+denoising: false
+output_path: benchmark.exr
+output_format: exr
+firefly_clamp: 20.0
+displacement_scale: 1.0
+tessellation_level: 6
+camera_fov: 45.0
+camera_distance: 3.0

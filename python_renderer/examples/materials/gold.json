@@ -1,0 +1,58 @@
+{
+  "name": "Gold",
+  "base": {
+    "weight": 1.0,
+    "color": [1.0, 0.766, 0.336],
+    "metalness": 1.0,
+    "diffuse_roughness": 0.0
+  },
+  "specular": {
+    "weight": 1.0,
+    "color": [1.0, 0.766, 0.336],
+    "roughness": 0.1,
+    "anisotropy": 0.0,
+    "ior": 0.47,
+    "haze": 0.0,
+    "retroreflectivity": 0.0
+  },
+  "transmission": {
+    "weight": 0.0,
+    "color": [1.0, 1.0, 1.0],
+    "depth": 0.0,
+    "scatter": [1.0, 1.0, 1.0],
+    "dispersion": 0.0
+  },
+  "subsurface": {
+    "weight": 0.0,
+    "color": [0.8, 0.8, 0.8],
+    "radius": [1.0, 1.0, 1.0],
+    "anisotropy": 0.0
+  },
+  "coat": {
+    "weight": 0.0,
+    "color": [1.0, 1.0, 1.0],
+    "roughness": 0.0,
+    "ior": 1.5,
+    "darkening": 1.0
+  },
+  "fuzz": {
+    "weight": 0.0,
+    "color": [1.0, 1.0, 1.0],
+    "roughness": 0.5
+  },
+  "emission": {
+    "weight": 0.0,
+    "luminance": 1.0,
+    "color": [1.0, 1.0, 1.0]
+  },
+  "thin_film": {
+    "weight": 0.0,
+    "thickness": 500.0,
+    "ior": 1.5
+  },
+  "geometry": {
+    "opacity": 1.0,
+    "thin_walled": false
+  },
+  "texture_maps": {}
+}
